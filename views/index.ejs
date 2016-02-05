@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="signups">
+  <head>
+    <meta charset="utf-8">
+    <title>MeanStuff</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="/javascripts/app.js" charset="utf-8"></script>
+    <script src="/javascripts/controllers/main.js" charset="utf-8"></script>
+    <script src="/javascripts/services/usersApiServices.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>Hello</h1>
+
+      <div ng-controller="main">
+
+        <form ng-submit="addUser()">
+          <input type="text" ng-model="newUser.username" >
+          <input type="text" ng-model="newUser.comment">
+          <input type="submit">
+        </form>
+
+      <ul class="all-users">
+        <li ng-repeat="user in users">
+          <h5> {{user.username}} </h5>
+          <p>
+            {{user.comment}}
+          </p>
+          <a href="#" ng-click="delete(user._id)">delete</a>
+        </li>
+      </ul>
+      </div>
+
+    </div>
+  </body>
+</html>

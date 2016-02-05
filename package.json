@@ -1,0 +1,20 @@
+{
+  "name": "meanapp",
+  "version": "1.0.0",
+  "description": "sign up app using full mean stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ana Lins",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "kerberos": "0.0.18",
+    "mongoose": "^4.4.1",
+    "morgan": "^1.6.1"
+  }
+}
