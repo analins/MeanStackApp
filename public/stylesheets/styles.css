@@ -37,9 +37,9 @@ h2 {
   color: gray;
 }
 .all-users {
-  margin: 4em;
+  margin: 3em 5em 0 5em;
   height: 75vh;
-  overflow: auto;
+  overflow: scroll;
 }
 
 li {
