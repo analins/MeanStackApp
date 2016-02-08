@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var faker = require('faker');
 
 var mongoPath = process.env.MONGOLAB_URI || 'mongodb://localhost/meansignup_api';
-mongoose.connect('mongodb://localhost/meansignup_api');
+mongoose.connect(mongoPath);
 
 
 function genUsers() {

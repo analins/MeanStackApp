@@ -6,8 +6,8 @@ require('dotenv').load();
 
 var app = express();
 
-// var mongoPath = process.env.MONGOLAB_URI || 'mongodb://localhost/meansignup_api';
-mongoose.connect('mongodb://localhost/meansignup_api');
+var mongoPath = process.env.MONGOLAB_URI || 'mongodb://localhost/meansignup_api';
+mongoose.connect(mongoPath);
 
 app.use(express.static('./public'));
 app.set('views', __dirname + '/views')
@@ -23,9 +23,9 @@ var usersRouter = require('./routes/api/users');
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 
-app.listen(8080, function(){
-  console.log("hello!");
-});
+// app.listen(8080, function(){
+//   console.log("hello!");
+// });
 
 var port = process.env.PORT || 3000;
 app.listen(port, function () {

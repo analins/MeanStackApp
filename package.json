@@ -1,9 +1,11 @@
 {
   "name": "meanapp",
   "version": "1.0.0",
+  "private": true,
   "description": "sign up app using full mean stack",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ana Lins",
