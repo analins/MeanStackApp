@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>MeanStuff</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway+Dots|Raleway|Codystar' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -11,27 +12,40 @@
     <script src="/javascripts/services/usersApiServices.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="container">
 
-      <h1>Hello</h1>
 
-      <div ng-controller="main">
+    <div class="contain">
+      <div ng-controller="main" class="row">
 
-        <form ng-submit="addUser()">
-          <input type="text" ng-model="newUser.username" >
-          <input type="text" ng-model="newUser.comment">
-          <input type="submit">
-        </form>
+      <div class=" three columns" id="sidebar-container">
+        <div class="sidebar">
+          <h1>Your Thoughts Count!</h1>
+          <form ng-submit="addUser()">
+            <div class="row">
+              <input type="text" ng-model="newUser.username" placeholder="username">
+            </div>
+            <div class="row">
+              <textarea type="text" ng-model="newUser.comment" rows="8" cols="30" placeholder="share your thoughts.."></textarea>
+            </div>
+            <div class="row">
+              <button type="submit">Share Thought</button>
+            </div>
+          </form>
+        </div>
+      </div>
 
-      <ul class="all-users">
-        <li ng-repeat="user in users">
-          <h5> {{user.username}} </h5>
-          <p>
-            {{user.comment}}
-          </p>
-          <a href="#" ng-click="delete(user._id)">delete</a>
-        </li>
-      </ul>
+      <div class="nine columns">
+        <h2>Recent Musings</h2>
+        <ul class="all-users">
+          <li ng-repeat="user in users">
+            <h5> {{user.username}} </h5>
+            <p>
+              {{user.comment}}
+            </p>
+            <a href="#" ng-click="delete(user._id)">DELETE</a>
+          </li>
+        </ul>
+      </div>
       </div>
 
     </div>

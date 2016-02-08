@@ -6,9 +6,8 @@ require('dotenv').load();
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/meansignup_api')
 // var mongoPath = process.env.MONGOLAB_URI || 'mongodb://localhost/meansignup_api';
-// mongoose.connect(mongoPath);
+mongoose.connect('mongodb://localhost/meansignup_api');
 
 app.use(express.static('./public'));
 app.set('views', __dirname + '/views')
@@ -28,7 +27,7 @@ app.listen(8080, function(){
   console.log("hello!");
 });
 
-// var port = process.env.PORT || 8080;
-// app.listen(port, function () {
-//   console.log('listening on ' + port);
-// });
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+console.log('listening on ' + port);
+});
